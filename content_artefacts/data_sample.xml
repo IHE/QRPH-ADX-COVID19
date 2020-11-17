@@ -1,5 +1,4 @@
-<adx xmlns='urn:ihe:qrph:adx:2015' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
-   >
+<adx xmlns='urn:ihe:qrph:adx:2015' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' >
   <group dataSet='AGG_WEEKLY_SURV' orgUnit='ZW01' period='2020-11-15/P7D'>
     <dataValue dataElement='CV19_NEW_CONF_CASES'  AGE_CV19='P0Y--P5Y'  SEX_WITH_UNK='M'  value='0'/>
     <dataValue dataElement='CV19_NEW_CONF_CASES'  AGE_CV19='P0Y--P5Y'  SEX_WITH_UNK='F'  value='0'/>
