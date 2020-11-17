@@ -1,0 +1,79 @@
+<xs:schema xmlns="urn:ihe:qrph:adx:2015" xmlns:common="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xmlns:str="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure" xmlns:com="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:ihe:qrph:adx:2015" elementFormDefault="qualified">
+    <xs:annotation>
+        <xs:documentation> This is an example of a tightly constrained schema which should
+                    validate an adx data document which has been formed in compliance with the
+                    sample SDMX DSD. </xs:documentation>
+    </xs:annotation>
+    <xs:import namespace="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" schemaLocation="../schema/sdmx/SDMXCommon.xsd"/>
+    <xs:simpleType name="CL_DATAELEMENT_IHE_QRPH_1.0_Type">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="CV19_NEW_CONF_DEATHS"/>
+            <xs:enumeration value="CV19_NEW_CONF_PROB_HW_DEATHS"/>
+            <xs:enumeration value="CV19_NEW_CONF_CASES"/>
+            <xs:enumeration value="CV19_NEW_PROB_CASES"/>
+            <xs:enumeration value="CV19_NEW_CONF_PROB_DISCHARGED"/>
+            <xs:enumeration value="CV19_NEW_CONF_PROB_HOSPITALIZED"/>
+            <xs:enumeration value="CV19_TESTED_PCR"/>
+            <xs:enumeration value="CV19_TESTED"/>
+            <xs:enumeration value="CV19_TRANS_CLASS"/>
+            <xs:enumeration value="CV19_NEW_CONF_PROB_HW_CASES"/>
+            <xs:enumeration value="CV19_NEW_PROB_DEATHS"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="CL_AGE_CV19_IHE_QRPH_1.0_Type">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="P0Y--P5Y"/>
+            <xs:enumeration value="P5Y--P10Y"/>
+            <xs:enumeration value="P10Y--P15Y"/>
+            <xs:enumeration value="P15Y--P20Y"/>
+            <xs:enumeration value="P20Y--P30Y"/>
+            <xs:enumeration value="P30Y--P40Y"/>
+            <xs:enumeration value="P40Y--P50Y"/>
+            <xs:enumeration value="P50Y--P60Y"/>
+            <xs:enumeration value="P60Y--P65Y"/>
+            <xs:enumeration value="P65Y--P70Y"/>
+            <xs:enumeration value="P70Y--P75Y"/>
+            <xs:enumeration value="P75Y--P80Y"/>
+            <xs:enumeration value="P80Y--P9999Y"/>
+            <xs:enumeration value="UNK_AGE"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="CL_SEX_WITH_UNK_IHE_QRPH_1.0_Type">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="M"/>
+            <xs:enumeration value="F"/>
+            <xs:enumeration value="UNK_SEX"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="periodType">
+        <xs:restriction base="common:TimeRangeType"/>
+    </xs:simpleType>
+    <xs:complexType name="adxType">
+        <xs:sequence maxOccurs="unbounded">
+            <xs:element name="group" type="groupType"/>
+        </xs:sequence>
+        <xs:attribute name="exported" use="optional" type="xs:dateTime"/>
+        <xs:anyAttribute processContents="skip"/>
+    </xs:complexType>
+    <xs:complexType name="groupType">
+        <xs:sequence maxOccurs="unbounded">
+            <xs:element name="dataValue" type="DataValueType"/>
+        </xs:sequence>
+        <xs:attribute name="dataSet" use="required" type="xs:string" fixed="AGG_WEEKLY_SURV"/>
+        <xs:attribute name="orgUnit" use="required" type="xs:string"/>
+        <xs:attribute name="period" use="required" type="periodType"/>
+        <xs:anyAttribute processContents="skip"/>
+    </xs:complexType>
+    <xs:complexType name="DataValueType">
+        <xs:sequence maxOccurs="1" minOccurs="0">
+            <xs:element name="annotation"/>
+        </xs:sequence>
+        <xs:attribute name="dataElement" use="required" type="CL_DATAELEMENT_IHE_QRPH_1.0_Type"/>
+        <xs:attribute name="value" use="required" type="xs:decimal"/>
+        <xs:attribute name="AGE_CV19" type="CL_AGE_CV19_IHE_QRPH_1.0_Type" use="optional"/>
+        <xs:attribute name="SEX_WITH_UNK" type="CL_SEX_WITH_UNK_IHE_QRPH_1.0_Type" use="optional"/>
+        <xs:anyAttribute processContents="skip"/>
+    </xs:complexType>
+    <xs:element name="adx" type="adxType"/>
+</xs:schema>
+

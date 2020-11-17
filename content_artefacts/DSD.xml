@@ -1,0 +1,250 @@
+<?xml-model href="../schema/dsd_validation.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<mes:Structure xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xmlns:str="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure" xmlns:mes="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xsi:schemaLocation="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message ../schema/sdmx/SDMXMessage.xsd">
+    <mes:Header>
+        <mes:ID>DSD_AGG_WEEKLY_SURV</mes:ID>
+        <mes:Test>false</mes:Test>
+        <mes:Prepared>2020-11-17T14:58:02.00Z</mes:Prepared>
+        <mes:Sender id="DHIS2_OPENHIE_SANDBOX"/>
+    </mes:Header>
+    <mes:Structures>
+        <str:Codelists>
+            <Codelist xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure" id="CL_DATAELEMENT" agencyID="IHE_QRPH" version="1.0">
+                <Name xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xml:lang="en">DataElement code list</Name>
+                <Code id="CV19_NEW_CONF_DEATHS">
+                    <Annotations xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+                        <Annotation xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" id="Disaggregation">
+                            <AnnotationText xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">AGE_CV19</AnnotationText>
+                        </Annotation>
+                        <Annotation xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" id="Disaggregation">
+                            <AnnotationText xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">SEX_WITH_UNK</AnnotationText>
+                        </Annotation>
+                    </Annotations>
+                    <Name xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xml:lang="en">COVID19 - New Confirmed Deaths</Name>
+                </Code>
+                <Code id="CV19_NEW_CONF_PROB_HW_DEATHS">
+                    <Name xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xml:lang="en">COVID19 - New Deaths Among HW (Confirmed + Probable)</Name>
+                </Code>
+                <Code id="CV19_NEW_CONF_CASES">
+                    <Annotations xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+                        <Annotation xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" id="Disaggregation">
+                            <AnnotationText xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">AGE_CV19</AnnotationText>
+                        </Annotation>
+                        <Annotation xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" id="Disaggregation">
+                            <AnnotationText xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">SEX_WITH_UNK</AnnotationText>
+                        </Annotation>
+                    </Annotations>
+                    <Name xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xml:lang="en">COVID19 - New Confirmed Cases</Name>
+                </Code>
+                <Code id="CV19_NEW_PROB_CASES">
+                    <Annotations xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+                        <Annotation xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" id="Disaggregation">
+                            <AnnotationText xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">AGE_CV19</AnnotationText>
+                        </Annotation>
+                        <Annotation xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" id="Disaggregation">
+                            <AnnotationText xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">SEX_WITH_UNK</AnnotationText>
+                        </Annotation>
+                    </Annotations>
+                    <Name xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xml:lang="en">COVID19 - New Probable Cases</Name>
+                </Code>
+                <Code id="CV19_NEW_CONF_PROB_DISCHARGED">
+                    <Name xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xml:lang="en">COVID19 - New Discharged Cases</Name>
+                </Code>
+                <Code id="CV19_NEW_CONF_PROB_HOSPITALIZED">
+                    <Name xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xml:lang="en">COVID19 - New Hospitalized Cases</Name>
+                </Code>
+                <Code id="CV19_TESTED_PCR">
+                    <Name xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xml:lang="en">COVID19 - Tested with PCR Assay</Name>
+                </Code>
+                <Code id="CV19_TESTED">
+                    <Name xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xml:lang="en">COVID19 - Tested</Name>
+                </Code>
+                <Code id="CV19_TRANS_CLASS">
+                    <Name xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xml:lang="en">COVID19 - Transmission Classification</Name>
+                </Code>
+                <Code id="CV19_NEW_CONF_PROB_HW_CASES">
+                    <Name xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xml:lang="en">COVID19 - New Cases Among HW (Confirmed + Probable)</Name>
+                </Code>
+                <Code id="CV19_NEW_PROB_DEATHS">
+                    <Annotations xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+                        <Annotation xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" id="Disaggregation">
+                            <AnnotationText xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">AGE_CV19</AnnotationText>
+                        </Annotation>
+                        <Annotation xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" id="Disaggregation">
+                            <AnnotationText xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">SEX_WITH_UNK</AnnotationText>
+                        </Annotation>
+                    </Annotations>
+                    <Name xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xml:lang="en">COVID19 - New Probable Deaths</Name>
+                </Code>
+            </Codelist>
+            <Codelist xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure" id="CL_AGE_CV19" agencyID="IHE_QRPH" version="1.0">
+                <Name xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xml:lang="en">Age (COVID19)</Name>
+                <Code id="P0Y--P5Y">
+                    <Name xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xml:lang="en">0-4 years</Name>
+                </Code>
+                <Code id="P5Y--P10Y">
+                    <Name xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xml:lang="en">5-9 years</Name>
+                </Code>
+                <Code id="P10Y--P15Y">
+                    <Name xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xml:lang="en">10-14 years</Name>
+                </Code>
+                <Code id="P15Y--P20Y">
+                    <Name xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xml:lang="en">15-19 years</Name>
+                </Code>
+                <Code id="P20Y--P30Y">
+                    <Name xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xml:lang="en">20-29 years</Name>
+                </Code>
+                <Code id="P30Y--P40Y">
+                    <Name xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xml:lang="en">30-39 years</Name>
+                </Code>
+                <Code id="P40Y--P50Y">
+                    <Name xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xml:lang="en">40-49 years</Name>
+                </Code>
+                <Code id="P50Y--P60Y">
+                    <Name xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xml:lang="en">50-59 years</Name>
+                </Code>
+                <Code id="P60Y--P65Y">
+                    <Name xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xml:lang="en">60-64 years</Name>
+                </Code>
+                <Code id="P65Y--P70Y">
+                    <Name xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xml:lang="en">65-69 years</Name>
+                </Code>
+                <Code id="P70Y--P75Y">
+                    <Name xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xml:lang="en">70-74 years</Name>
+                </Code>
+                <Code id="P75Y--P80Y">
+                    <Name xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xml:lang="en">75-79 years</Name>
+                </Code>
+                <Code id="P80Y--P9999Y">
+                    <Name xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xml:lang="en">80+ years</Name>
+                </Code>
+                <Code id="UNK_AGE">
+                    <Name xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xml:lang="en">Unknown age</Name>
+                </Code>
+            </Codelist>
+            <Codelist xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure" id="CL_SEX_WITH_UNK" agencyID="IHE_QRPH" version="1.0">
+                <Name xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xml:lang="en">Sex (with unknown)</Name>
+                <Code id="M">
+                    <Name xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xml:lang="en">Male</Name>
+                </Code>
+                <Code id="F">
+                    <Name xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xml:lang="en">Female</Name>
+                </Code>
+                <Code id="UNK_SEX">
+                    <Name xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xml:lang="en">Unknown Sex</Name>
+                </Code>
+            </Codelist>
+        </str:Codelists>
+        <str:Concepts>
+            <!-- ADX Mandatory concepts -->
+            <str:ConceptScheme id="ADX_MANDATORY_CONCEPTS" agencyID="IHE_QRPH" version="1.0">
+                <com:Name xml:lang="en">Mandatory concepts defined by IHE ADX profile</com:Name>
+                <!--  There is no default representation for these concepts.  An Agency which makes
+                      use of these to construct an ADX DataStructure has to provide a local representation -->
+                <str:Concept id="dataElement">
+                    <com:Name xml:lang="en">Subject of the data measure</com:Name>
+                </str:Concept>
+                <str:Concept id="orgUnit">
+                    <com:Name xml:lang="en">Spatial dimension of the measure</com:Name>
+                </str:Concept>
+                <str:Concept id="period">
+                    <com:Name xml:lang="en">Temporal dimension of the measure</com:Name>
+                </str:Concept>
+                <!-- The value concept is represented by an integer or real number (xsd:decimal)-->
+                <str:Concept id="value">
+                    <com:Name xml:lang="en">Value of the data measure</com:Name>
+                    <str:CoreRepresentation>
+                        <str:TextFormat textType="Decimal"/>
+                    </str:CoreRepresentation>
+                </str:Concept>
+            </str:ConceptScheme>
+            <ConceptScheme xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure" id="IHE_QRPH_CONCEPTS" agencyID="IHE_QRPH" version="1.0">
+                <Name xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xml:lang="en">IHE_QRPH concepts</Name>
+                <Concept id="AGE_CV19">
+                    <Name xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xml:lang="en">Age (COVID19)</Name>
+                    <CoreRepresentation xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure">
+                        <Enumeration xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure">
+                            <Ref xmlns="" agencyID="IHE_QRPH" version="1.0" id="CL_AGE_CV19"/>
+                        </Enumeration>
+                    </CoreRepresentation>
+                </Concept>
+                <Concept id="SEX_WITH_UNK">
+                    <Name xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xml:lang="en">Sex (with unknown)</Name>
+                    <CoreRepresentation xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure">
+                        <Enumeration xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure">
+                            <Ref xmlns="" agencyID="IHE_QRPH" version="1.0" id="CL_SEX_WITH_UNK"/>
+                        </Enumeration>
+                    </CoreRepresentation>
+                </Concept>
+            </ConceptScheme>
+        </str:Concepts>
+        <str:DataStructures>
+            <str:DataStructure id="DSD_AGG_WEEKLY_SURV" agencyID="IHE_QRPH" version="1.0">
+                <com:Name xml:lang="en">{name {COVID19 - Aggregate Weekly Surveillance}}</com:Name>
+                <str:DataStructureComponents>
+                    <str:DimensionList>
+                        <str:Dimension id="dataElement">
+                            <str:ConceptIdentity>
+                                <Ref id="dataElement" maintainableParentID="ADX_MANDATORY_CONCEPTS" maintainableParentVersion="1.0" agencyID="IHE_QRPH"/>
+                            </str:ConceptIdentity>
+                            <str:LocalRepresentation>
+                                <str:Enumeration>
+                                    <Ref agencyID="IHE_QRPH" id="CL_DATAELEMENT" version="1.0"/>
+                                </str:Enumeration>
+                            </str:LocalRepresentation>
+                        </str:Dimension>
+                        <str:Dimension id="orgUnit">
+                            <str:ConceptIdentity>
+                                <Ref id="orgUnit" maintainableParentID="ADX_MANDATORY_CONCEPTS" maintainableParentVersion="1.0" agencyID="IHE_QRPH"/>
+                            </str:ConceptIdentity>
+                            <str:LocalRepresentation>
+                                <str:TextFormat/>
+                            </str:LocalRepresentation>
+                        </str:Dimension>
+                        <str:Dimension xmlns:str="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure" id="AGE_CV19">
+                            <str:ConceptIdentity>
+                                <Ref id="AGE_CV19" maintainableParentID="IHE_QRPH_CONCEPTS" maintainableParentVersion="1.0" agencyID="IHE_QRPH"/>
+                            </str:ConceptIdentity>
+                        </str:Dimension>
+                        <str:Dimension xmlns:str="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure" id="SEX_WITH_UNK">
+                            <str:ConceptIdentity>
+                                <Ref id="SEX_WITH_UNK" maintainableParentID="IHE_QRPH_CONCEPTS" maintainableParentVersion="1.0" agencyID="IHE_QRPH"/>
+                            </str:ConceptIdentity>
+                        </str:Dimension>
+                        <str:TimeDimension id="TIME_PERIOD">
+                            <str:ConceptIdentity>
+                                <Ref id="period" maintainableParentID="ADX_MANDATORY_CONCEPTS" maintainableParentVersion="1.0" agencyID="IHE_QRPH"/>
+                            </str:ConceptIdentity>
+                            <str:LocalRepresentation>
+                                <str:TextFormat textType="TimeRange"/>
+                            </str:LocalRepresentation>
+                        </str:TimeDimension>
+                    </str:DimensionList>
+                    <!-- These dimensions are identified as being used as outer dimensions
+            of the data.  They must include orgUnit and period.  -->
+                    <str:Group id="OUTER_DIMENSIONS">
+                        <str:GroupDimension>
+                            <str:DimensionReference>
+                                <Ref id="orgUnit"/>
+                            </str:DimensionReference>
+                        </str:GroupDimension>
+                        <str:GroupDimension>
+                            <str:DimensionReference>
+                                <Ref id="TIME_PERIOD"/>
+                            </str:DimensionReference>
+                        </str:GroupDimension>
+                    </str:Group>
+                    <!-- ADX requires that there be a primary measure which is linked to
+            the value concept.  -->
+                    <str:MeasureList>
+                        <str:PrimaryMeasure>
+                            <str:ConceptIdentity>
+                                <Ref id="value" maintainableParentID="ADX_MANDATORY_CONCEPTS" maintainableParentVersion="1.0" agencyID="IHE"/>
+                            </str:ConceptIdentity>
+                        </str:PrimaryMeasure>
+                    </str:MeasureList>
+                </str:DataStructureComponents>
+            </str:DataStructure>
+        </str:DataStructures>
+    </mes:Structures>
+</mes:Structure>
+
